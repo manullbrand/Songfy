@@ -80,4 +80,6 @@ This project is licensed under the MIT License.
 ## 📧 Contact
 
 Project Link: https://github.com/manullbrand/Songfy
+Personal LinkedIn: https://www.linkedin.com/in/manulbrandao
+
 Feel free to reach out if you have any questions or suggestions!
