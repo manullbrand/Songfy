@@ -1,23 +1,46 @@
+import styled from "styled-components";
+import { Button } from "../Button";
+
+const TopNavigationList = styled.ul`
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 22px 0;
+`;
+
+const TopNavigationLinks = styled.div`
+  display: flex;
+  column-gap: 20px;
+  a {
+    text-decoration: none;
+  }
+`;
+
 export default function TopNavegation() {
   return (
     <nav>
-      <ul>
-        <li>
-          <a href="#">Go back</a>
-        </li>
-        <li>
-          <a href="#">Go forward</a>
-        </li>
-        <li>
-          <a href="#">Install App</a>
-        </li>
-        <li>
-          <a href="#">News</a>
-        </li>
-        <li>
-          <button>Dropdown com interação do usuário</button>
-        </li>
-      </ul>
+      <TopNavigationList>
+        <TopNavigationLinks>
+          <li>
+            <Button>Left</Button>
+          </li>
+          <li>
+            <Button>Right</Button>
+          </li>
+        </TopNavigationLinks>
+        <TopNavigationLinks>
+          <li>
+            <Button>Install App</Button>
+          </li>
+          <li>
+            <Button>News</Button>
+          </li>
+          <li>
+            <Button>Dropdown com interação do usuário</Button>
+          </li>
+        </TopNavigationLinks>
+      </TopNavigationList>
     </nav>
   );
 }

@@ -1,8 +1,22 @@
 import { createGlobalStyle } from "styled-components";
+import { CSSVariables } from "../CSSVariables";
+import FigtreeRegular from "./fonts/Figtree-Regular.ttf";
+import FigtreeBold from "./fonts/Figtree-Bold.ttf";
 
 const GlobalStyles = createGlobalStyle`
+
+@font-face {
+  font-family: 'FigtreeRegular' ;
+  src: local("Figtree Regular"), local('FigtreeRegular'), url(${FigtreeRegular});
+}
+
+@font-face {
+  font-family: 'FigtreeBold' ;
+  src: local('Figtree Bold'), local('FigtreeBold'), url(${FigtreeBold});
+}
+
 html {
-  font-family: GandhiSansRegular;
+  font-family: FigtreeRegular;
   line-height: 1.15; 
   -webkit-text-size-adjust: 100%; 
 
@@ -15,9 +29,15 @@ main {
   display: block;
 }
 h1 {
+  color: ${CSSVariables.colors.text};
   font-size: 2em;
   margin: 0.67em 0;
 }
+
+h2, h3, p {
+  color: ${CSSVariables.colors.text};
+}
+
 hr {
   box-sizing: content-box; 
   height: 0; 
@@ -25,6 +45,7 @@ hr {
 }
 a {
   background-color: transparent;
+  color: ${CSSVariables.colors.text};
 }
 abbr[title] {
   border-bottom: none; 
@@ -65,6 +86,7 @@ input,
 optgroup,
 select,
 textarea {
+  color: ${CSSVariables.colors.text};
   font-family: inherit; 
   font-size: 100%; 
   line-height: 1.15; 

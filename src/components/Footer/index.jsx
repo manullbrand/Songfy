@@ -1,6 +1,16 @@
+import styled from "styled-components";
+import { CSSVariables } from "../CSSVariables";
+
+const FooterContainer = styled.footer`
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+ 
+`;
+
 export default function Footer() {
   return (
-    <footer>
+    <FooterContainer>
       <div>
         <img src="" alt="Album cover" />
         <h3>Music name</h3>
@@ -18,13 +28,13 @@ export default function Footer() {
       </div>
 
       <div>
-        <icon>Now playing view</icon>
-        <icon>Lyrics</icon>
-        <icon>Queue</icon>
-        <icon>Connect to a device</icon>
-        <icon>Mute</icon>
-        <icon>Expand</icon>
+        <i>Now playing view</i>
+        <i>Lyrics</i>
+        <i>Queue</i>
+        <i>Connect to a device</i>
+        <i>Mute</i>
+        <i>Expand</i>
       </div>
-    </footer>
+    </FooterContainer>
   );
 }
