@@ -1,9 +1,11 @@
 const colors = {
-  primary: "#1F4172",
-  secondary: "#F1B4BB",
-  terciary: "#FDF0F0",
-  background: "#132043",
-  text: "#FFFFFF",
+  primary: "#121212",
+  secondary: "#2A2A2A",
+  secondaryTransparent: "rgba(186, 184, 184, 0.15)",
+  terciary: "#181818",
+  background: "#000000",
+  activeText: "#FFFFFF",
+  inactiveText: "#B3B3B3",
 };
 
 const fonts = {

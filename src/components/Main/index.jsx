@@ -15,10 +15,9 @@ const TitleSection = styled.div`
 const ListSection = styled.ul`
   display: flex;
   justify-content: space-between;
-  list-style: none;
-  padding: 0;
+   padding: 0;
   li {
-    background-color: ${CSSVariables.colors.secondary};
+    background-color: ${CSSVariables.colors.terciary};
     border-radius: 5px;
     padding: 20px 10px;
   }
@@ -48,17 +47,17 @@ export default function Main() {
             <p>Date and minutes</p>
           </li>
           <li>
-            <MainAlbumCoverImage src="" alt="" />
+            <MainAlbumCoverImage src={albumCoverBig} alt="" />
             <h3>ENCANTADO</h3>
             <p>Date and minutes</p>
           </li>
           <li>
-            <MainAlbumCoverImage src="" alt="" />
+            <MainAlbumCoverImage src={albumCoverBig} alt="" />
             <h3>Prelúdio 1</h3>
             <p>Date and minutes</p>
           </li>
           <li>
-            <MainAlbumCoverImage src="" alt="" />
+            <MainAlbumCoverImage src={albumCoverBig} alt="" />
             <h3>The woman</h3>
             <p>Date and minutes</p>
           </li>
@@ -76,22 +75,22 @@ export default function Main() {
         </TitleSection>
         <ListSection>
           <li>
-            <MainAlbumCoverImage src="" alt="" />
+            <MainAlbumCoverImage src={albumCoverBig} alt="" />
             <h3>Rain Sounds</h3>
             <p>Date and minutes</p>
           </li>
           <li>
-            <MainAlbumCoverImage src="" alt="" />
+            <MainAlbumCoverImage src={albumCoverBig} alt="" />
             <h3>ENCANTADO</h3>
             <p>Date and minutes</p>
           </li>
           <li>
-            <MainAlbumCoverImage src="" alt="" />
+            <MainAlbumCoverImage src={albumCoverBig} alt="" />
             <h3>Prelúdio 1</h3>
             <p>Date and minutes</p>
           </li>
           <li>
-            <MainAlbumCoverImage src="" alt="" />
+            <MainAlbumCoverImage src={albumCoverBig} alt="" />
             <h3>The woman</h3>
             <p>Date and minutes</p>
           </li>
@@ -109,22 +108,22 @@ export default function Main() {
         </TitleSection>
         <ListSection>
           <li>
-            <MainAlbumCoverImage src="" alt="" />
+            <MainAlbumCoverImage src={albumCoverBig} alt="" />
             <h3>Rain Sounds</h3>
             <p>Date and minutes</p>
           </li>
           <li>
-            <MainAlbumCoverImage src="" alt="" />
+            <MainAlbumCoverImage src={albumCoverBig} alt="" />
             <h3>ENCANTADO</h3>
             <p>Date and minutes</p>
           </li>
           <li>
-            <MainAlbumCoverImage src="" alt="" />
+            <MainAlbumCoverImage src={albumCoverBig} alt="" />
             <h3>Prelúdio 1</h3>
             <p>Date and minutes</p>
           </li>
           <li>
-            <MainAlbumCoverImage src="" alt="" />
+            <MainAlbumCoverImage src={albumCoverBig} alt="" />
             <h3>The woman</h3>
             <p>Date and minutes</p>
           </li>

@@ -8,3 +8,12 @@ export const Button = styled.button`
   cursor: pointer;
   padding: 10px;
 `;
+
+export const ButtonTag = styled.button`
+  background-color: ${CSSVariables.colors.secondary};
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+`;
+

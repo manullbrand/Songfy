@@ -29,13 +29,13 @@ main {
   display: block;
 }
 h1 {
-  color: ${CSSVariables.colors.text};
+  color: ${CSSVariables.colors.activeText};
   font-size: 2em;
   margin: 0.67em 0;
 }
 
 h2, h3, p {
-  color: ${CSSVariables.colors.text};
+  color: ${CSSVariables.colors.activeText};
 }
 
 hr {
@@ -43,9 +43,15 @@ hr {
   height: 0; 
   overflow: visible; 
 }
+
+ul {
+ list-style: none;
+}
+
 a {
   background-color: transparent;
-  color: ${CSSVariables.colors.text};
+  color: ${CSSVariables.colors.activeText};
+  text-decoration: none;
 }
 abbr[title] {
   border-bottom: none; 
@@ -86,7 +92,7 @@ input,
 optgroup,
 select,
 textarea {
-  color: ${CSSVariables.colors.text};
+  color: ${CSSVariables.colors.inactiveText};
   font-family: inherit; 
   font-size: 100%; 
   line-height: 1.15; 

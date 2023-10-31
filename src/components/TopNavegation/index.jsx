@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { Button } from "../Button";
+import { CSSVariables } from "../CSSVariables";
 
 const TopNavigationList = styled.ul`
   display: flex;
   justify-content: space-between;
-  list-style: none;
   margin: 0;
   padding: 22px 0;
 `;
