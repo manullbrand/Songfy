@@ -1,78 +1,241 @@
 import styled from "styled-components";
 import { CSSVariables } from "../CSSVariables";
-import { Button, ButtonTag } from "../Button";
+import { ButtonExplore, ButtonForward, ButtonTag } from "../Button";
+import {
+  AiFillHome,
+  AiOutlineArrowRight,
+  AiOutlinePlus,
+  AiOutlineUnorderedList,
+} from "react-icons/ai";
+import { HiMiniMagnifyingGlass } from "react-icons/hi2";
+import { IoLibrarySharp } from "react-icons/io5";
+import albumCover from "../../assets/images/album-cover.png";
+import { BsFillPinAngleFill } from "react-icons/bs";
 
 const AsideContainer = styled.aside`
-  height: 100vh;
-  nav {
-    background-color: ${CSSVariables.colors.primary};
-    border-radius: 5px;
-    margin-bottom: 6px;
-    padding: 1px;
-    
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  row-gap: 10px;
+`;
+
+const AsideFirstNav = styled.nav`
+  background-color: ${CSSVariables.colors.primary};
+  border-radius: 5px;
+  padding: 1px;
+  span {
+    align-items: center;
+    display: flex;
+    height: 40px;
+    gap: 20px;
+    padding: 4px 12px;
+
+    h2 {
+      font-size: 1rem;
+    }
+    svg {
+      font-size: 25px;
+    }
   }
 `;
 
 const AsideList = styled.ul`
-   padding: 0;
+  padding: 0;
+ li {
+  margin-bottom: 5px;
+ }
+
   a {
-    text-decoration: none;
+    border-radius: 4px;
+    column-gap: 15px;
+    display: flex;
+    padding: 5px;
+
+    &:hover {
+      background-color: ${CSSVariables.colors.terciary};
+    }
+
+    img {
+      border-radius: 2px;
+      height: 48px;
+      width: 48px;
+    }
+
+    div {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      justify-content: center;
+
+      h3 {
+        font-size: 0.9rem;
+        margin: 0;
+      }
+
+      p {
+        font-size: 0.875rem;
+        .pin {
+          color: #1fdf64;
+        }
+      }
+    }
+  }
+`;
+
+const AsideSecondNav = styled.nav`
+  background-color: ${CSSVariables.colors.primary};
+  border-radius: 5px;
+  height: 100vh;
+  padding: 8px 12px;
+
+  div {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      color: ${CSSVariables.colors.inactiveText};
+      font-size: 1rem;
+      font-weight: ;
+      margin: 0;
+    }
   }
 `;
 
 const TagList = styled.ul`
- display: flex;
- flex-direction: row;
- column-gap: 8px;
- padding: 0;
-
-`
+  display: flex;
+  column-gap: 8px;
+  padding: 0;
+`;
 
 export default function SideBar() {
   return (
     <>
       <AsideContainer>
         <div>
-          <nav>
+          <AsideFirstNav>
             <AsideList>
               <li>
-                <a href="#">Home</a>
+                <a href="#">
+                  <span>
+                    <AiFillHome />
+                    <h2>Home</h2>
+                  </span>
+                </a>
               </li>
               <li>
-                <a href="#">Search</a>
+                <a href="#">
+                  <span>
+                    <HiMiniMagnifyingGlass />
+                    <h2>Search</h2>
+                  </span>
+                </a>
               </li>
             </AsideList>
-          </nav>
+          </AsideFirstNav>
         </div>
 
-        <nav>
-          <Button>Your Library</Button>
-          <Button>+</Button>
-          <Button>seta</Button>
+        <AsideSecondNav>
+          <div>
+            <ButtonExplore>
+              <span>
+                <IoLibrarySharp />
+                <p>Your Library</p>
+              </span>
+            </ButtonExplore>
+            <span>
+              <ButtonExplore>
+                <AiOutlinePlus />
+              </ButtonExplore>
+              <ButtonExplore>
+                <AiOutlineArrowRight />
+              </ButtonExplore>
+            </span>
+          </div>
           <TagList>
-            <li><ButtonTag>Playslists</ButtonTag></li>
-            <li><ButtonTag>Artists</ButtonTag></li>
-            <li><ButtonTag>Albuns</ButtonTag></li>
-            <li><ButtonTag>more</ButtonTag></li>
+            <li>
+              <ButtonTag>Playslists</ButtonTag>
+            </li>
+            <li>
+              <ButtonTag>Artists</ButtonTag>
+            </li>
+            <li>
+              <ButtonTag>Albuns</ButtonTag>
+            </li>
+            <li>
+              <ButtonForward />
+            </li>
           </TagList>
+          <div>
+            <ButtonExplore>
+              <HiMiniMagnifyingGlass />
+            </ButtonExplore>
+            <ButtonExplore>
+              <span>
+                <p>Recents</p>
+                <AiOutlineUnorderedList />
+              </span>
+            </ButtonExplore>
+          </div>
           <AsideList>
             <li>
-              <a href="#">Musica1</a>
+              <a href="#">
+                <img src={albumCover} alt="" />
+                <div>
+                  <h3>Liked Songs</h3>
+                  <p>
+                    <BsFillPinAngleFill className="pin" /> Playslist • 116 songs
+                  </p>
+                </div>
+              </a>
             </li>
             <li>
-              <a href="#">Musica2</a>
+              <a href="#">
+                <img src={albumCover} alt="" />
+                <div>
+                  <h3>Liked Songs</h3>
+                  <p>
+                    <BsFillPinAngleFill className="pin" /> Playslist • 116 songs
+                  </p>
+                </div>
+              </a>
             </li>
             <li>
-              <a href="#">Musica3</a>
+              <a href="#">
+                <img src={albumCover} alt="" />
+                <div>
+                  <h3>Liked Songs</h3>
+                  <p>
+                    <BsFillPinAngleFill className="pin" /> Playslist • 116 songs
+                  </p>
+                </div>
+              </a>
             </li>
             <li>
-              <a href="#">Musica4</a>
+              <a href="#">
+                <img src={albumCover} alt="" />
+                <div>
+                  <h3>Liked Songs</h3>
+                  <p>
+                    <BsFillPinAngleFill className="pin" /> Playslist • 116 songs
+                  </p>
+                </div>
+              </a>
             </li>
             <li>
-              <a href="#">Musica5</a>
+              <a href="#">
+                <img src={albumCover} alt="" />
+                <div>
+                  <h3>Liked Songs</h3>
+                  <p>
+                    <BsFillPinAngleFill className="pin" /> Playslist • 116 songs
+                  </p>
+                </div>
+              </a>
             </li>
           </AsideList>
-        </nav>
+        </AsideSecondNav>
       </AsideContainer>
     </>
   );

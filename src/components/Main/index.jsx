@@ -61,6 +61,11 @@ export default function Main() {
             <h3>The woman</h3>
             <p>Date and minutes</p>
           </li>
+          <li>
+            <MainAlbumCoverImage src={albumCoverBig} alt="" />
+            <h3>The woman</h3>
+            <p>Date and minutes</p>
+          </li>
         </ListSection>
       </section>
 

@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { Button } from "../Button";
-import { CSSVariables } from "../CSSVariables";
+import { Button, ButtonBack, ButtonForward } from "../Button";
 
 const TopNavigationList = styled.ul`
   display: flex;
@@ -23,10 +22,10 @@ export default function TopNavegation() {
       <TopNavigationList>
         <TopNavigationLinks>
           <li>
-            <Button>Left</Button>
+            <ButtonBack />
           </li>
           <li>
-            <Button>Right</Button>
+            <ButtonForward />
           </li>
         </TopNavigationLinks>
         <TopNavigationLinks>

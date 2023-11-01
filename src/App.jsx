@@ -12,7 +12,8 @@ const MainContainer = styled.div`
   background-color: ${CSSVariables.colors.background};
   display: flex;
   gap: 6px;
-  margin: 0;
+   margin: 0;
+  max-width: 1440px;
   padding: 6px;
 `;
 

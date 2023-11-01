@@ -87,6 +87,13 @@ sup {
 img {
   border-style: none;
 }
+
+button {
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
 button,
 input,
 optgroup,
