@@ -36,9 +36,16 @@ export const ButtonForward = styled(IoIosArrowForward)`
 
 export const ButtonBack = styled(IoIosArrowBack)`
   align-items: center;
+  background-color: ${CSSVariables.colors.background};
   border-radius: 50%;
   color: ${CSSVariables.colors.inactiveText};
+  font-size: 20px;
+  padding: 10px;
+`;
+
+export const ButtonFooter = styled.button`
   background-color: ${CSSVariables.colors.background};
+  color: ${CSSVariables.colors.inactiveText};
   font-size: 20px;
   padding: 10px;
 `;

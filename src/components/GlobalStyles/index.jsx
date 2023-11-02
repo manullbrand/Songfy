@@ -36,6 +36,7 @@ h1 {
 
 h2, h3, p {
   color: ${CSSVariables.colors.activeText};
+  margin: 0;
 }
 
 hr {

@@ -9,12 +9,17 @@ import { CSSVariables } from "./components/CSSVariables";
 import NavigationContainer from "./components/NavigationContainer";
 
 const MainContainer = styled.div`
+
   background-color: ${CSSVariables.colors.background};
   display: flex;
   gap: 6px;
+  height: 100%;
+  justify-content: center;
    margin: 0;
-  max-width: 1440px;
+  width: 100%;
   padding: 6px;
+
+  
 `;
 
 function App() {
@@ -28,7 +33,7 @@ function App() {
           <LastListened />
           <Main />
         </NavigationContainer>
-      </MainContainer>
+        </MainContainer>
       <Footer />
     </>
   );

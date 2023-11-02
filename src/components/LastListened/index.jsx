@@ -6,7 +6,7 @@ import { BiPlay } from "react-icons/bi";
 const LastListenedContainer = styled.section`
   margin: 0;
   h2 {
-    width: 100vw;
+    margin: 20px 0;
   }
 `;
 
@@ -33,7 +33,6 @@ const LastListenedList = styled.ul`
 
         p {
           font-size: 0.875rem;
-          margin: 0;
         }
         button {
           background: none;
@@ -44,10 +43,9 @@ const LastListenedList = styled.ul`
           &:hover .icon {
             background-color: #1fdf64;
             border-radius: 50px;
-            box-shadow: 0 8px 8px rgba(0,0,0,.3);
+            box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
             display: block;
             cursor: pointer;
-           
           }
         }
       }
@@ -73,8 +71,8 @@ const LastListenedImage = styled.img`
 export default function LastListened() {
   return (
     <>
-      <h2>Good Afternoon</h2>
       <LastListenedContainer>
+        <h2>Good afternoon</h2>
         <LastListenedList>
           <li>
             <a href="#">

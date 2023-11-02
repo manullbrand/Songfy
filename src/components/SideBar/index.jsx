@@ -9,20 +9,20 @@ import {
 } from "react-icons/ai";
 import { HiMiniMagnifyingGlass } from "react-icons/hi2";
 import { IoLibrarySharp } from "react-icons/io5";
-import albumCover from "../../assets/images/album-cover.png";
+import albumCover2 from "../../assets/images/album-cover2.png";
 import { BsFillPinAngleFill } from "react-icons/bs";
 
 const AsideContainer = styled.aside`
   display: flex;
   flex-direction: column;
-  height: 100%;
-  row-gap: 10px;
+ row-gap: 10px;
 `;
 
 const AsideFirstNav = styled.nav`
   background-color: ${CSSVariables.colors.primary};
   border-radius: 5px;
   padding: 1px;
+
   span {
     align-items: center;
     display: flex;
@@ -32,6 +32,7 @@ const AsideFirstNav = styled.nav`
 
     h2 {
       font-size: 1rem;
+     
     }
     svg {
       font-size: 25px;
@@ -41,11 +42,11 @@ const AsideFirstNav = styled.nav`
 
 const AsideList = styled.ul`
   padding: 0;
- li {
-  margin-bottom: 5px;
- }
+  li {
+    margin-bottom: 5px;
+  }
 
-  a {
+  .aside__songs {
     border-radius: 4px;
     column-gap: 15px;
     display: flex;
@@ -88,6 +89,7 @@ const AsideSecondNav = styled.nav`
   border-radius: 5px;
   height: 100vh;
   padding: 8px 12px;
+  overflow: auto;
 
   div {
     align-items: center;
@@ -180,8 +182,8 @@ export default function SideBar() {
           </div>
           <AsideList>
             <li>
-              <a href="#">
-                <img src={albumCover} alt="" />
+              <a className="aside__songs" href="#">
+                <img src={albumCover2} alt="" />
                 <div>
                   <h3>Liked Songs</h3>
                   <p>
@@ -191,8 +193,8 @@ export default function SideBar() {
               </a>
             </li>
             <li>
-              <a href="#">
-                <img src={albumCover} alt="" />
+              <a className="aside__songs" href="#">
+                <img src={albumCover2} alt="" />
                 <div>
                   <h3>Liked Songs</h3>
                   <p>
@@ -202,35 +204,29 @@ export default function SideBar() {
               </a>
             </li>
             <li>
-              <a href="#">
-                <img src={albumCover} alt="" />
+              <a className="aside__songs" href="#">
+                <img src={albumCover2} alt="" />
                 <div>
                   <h3>Liked Songs</h3>
-                  <p>
-                    <BsFillPinAngleFill className="pin" /> Playslist • 116 songs
-                  </p>
+                  <p>Playslist • 116 songs</p>
                 </div>
               </a>
             </li>
             <li>
-              <a href="#">
-                <img src={albumCover} alt="" />
+              <a className="aside__songs" href="#">
+                <img src={albumCover2} alt="" />
                 <div>
                   <h3>Liked Songs</h3>
-                  <p>
-                    <BsFillPinAngleFill className="pin" /> Playslist • 116 songs
-                  </p>
+                  <p>Playslist • 116 songs</p>
                 </div>
               </a>
             </li>
             <li>
-              <a href="#">
-                <img src={albumCover} alt="" />
+              <a className="aside__songs" href="#">
+                <img src={albumCover2} alt="" />
                 <div>
                   <h3>Liked Songs</h3>
-                  <p>
-                    <BsFillPinAngleFill className="pin" /> Playslist • 116 songs
-                  </p>
+                  <p>Playslist • 116 songs</p>
                 </div>
               </a>
             </li>
