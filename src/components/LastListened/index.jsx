@@ -32,6 +32,7 @@ const LastListenedList = styled.ul`
         padding: 0 16px;
 
         p {
+          align-self: center;
           font-size: 0.875rem;
         }
         button {

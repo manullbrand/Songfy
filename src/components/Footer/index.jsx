@@ -21,7 +21,7 @@ const FooterContainer = styled.footer`
   background-color: ${CSSVariables.colors.background};
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1.2fr 1fr;
   min-width: 1230px;
 `;
 
@@ -29,7 +29,7 @@ const PlayingNow = styled.div`
   align-items: center;
   display: flex;
   justify-content: flex-start;
-  padding: 10px;
+  padding-left: 10px;
 
   img {
     height: 56px;
@@ -43,10 +43,60 @@ const PlayingNow = styled.div`
     h3 {
       font-size: 12px;
     }
-    
+
     p {
       color: ${CSSVariables.colors.inactiveText};
       font-size: 10px;
+    }
+  }
+`;
+
+const PlayingControler = styled.div`
+  padding-bottom: 10px;
+
+  div {
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .form-range {
+      box-sizing: border-box;
+      cursor: pointer;
+      height: 0.3rem;
+      margin: 0 10px;
+      width: 100%;
+    }
+  }
+
+  .play__button {
+    color: ${CSSVariables.colors.activeText};
+    font-size: 40px;
+  }
+
+  p {
+    color: ${CSSVariables.colors.inactiveText};
+    font-size: 11px;
+  }
+`;
+
+const FooterExtras = styled.div`
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+
+  div {
+    align-items: center;
+    display: flex;
+
+    label {
+      padding-left: 5px;
+    }
+
+    input {
+      height: 0.3rem;
     }
   }
 `;
@@ -65,29 +115,33 @@ export default function Footer() {
         </ButtonFooter>
       </PlayingNow>
 
-      <div>
-        <ButtonFooter>
-          <BiShuffle />
-        </ButtonFooter>
-        <ButtonFooter>
-          <AiOutlineStepBackward />
-        </ButtonFooter>
-        <ButtonFooter>
-          <AiFillPlayCircle />
-        </ButtonFooter>
-        <ButtonFooter>
-          <AiOutlineStepForward />
-        </ButtonFooter>
-        <ButtonFooter>
-          <MdReplay />
-        </ButtonFooter>
+      <PlayingControler>
         <div>
+          <ButtonFooter>
+            <BiShuffle />
+          </ButtonFooter>
+          <ButtonFooter>
+            <AiOutlineStepBackward />
+          </ButtonFooter>
+          <ButtonFooter>
+            <AiFillPlayCircle className="play__button" />
+          </ButtonFooter>
+          <ButtonFooter>
+            <AiOutlineStepForward />
+          </ButtonFooter>
+          <ButtonFooter>
+            <MdReplay />
+          </ButtonFooter>
+        </div>
+        <div>
+          <p>0:23</p>
           <label className="form-label"></label>
           <input type="range" className="form-range" id="customRange1"></input>
+          <p>4:27</p>
         </div>
-      </div>
+      </PlayingControler>
 
-      <div>
+      <FooterExtras>
         <ButtonFooter>
           <AiOutlinePlaySquare />
         </ButtonFooter>
@@ -101,9 +155,15 @@ export default function Footer() {
           <LuMonitorSpeaker />
         </ButtonFooter>
         <ButtonFooter>
-          <HiOutlineSpeakerWave />
-          <label className="form-label"></label>
-          <input type="range" className="form-range" id="customRange1"></input>
+          <div>
+            <HiOutlineSpeakerWave />
+            <label className="form-label"></label>
+            <input
+              type="range"
+              className="form-range"
+              id="customRange1"
+            ></input>
+          </div>
         </ButtonFooter>
         <ButtonFooter>
           <PiPictureInPictureFill />
@@ -111,7 +171,7 @@ export default function Footer() {
         <ButtonFooter>
           <AiOutlineExpandAlt />
         </ButtonFooter>
-      </div>
+      </FooterExtras>
     </FooterContainer>
   );
 }

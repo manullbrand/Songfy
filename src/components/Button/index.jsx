@@ -44,6 +44,8 @@ export const ButtonBack = styled(IoIosArrowBack)`
 `;
 
 export const ButtonFooter = styled.button`
+  align-items: center;
+  display: flex;
   background-color: ${CSSVariables.colors.background};
   color: ${CSSVariables.colors.inactiveText};
   font-size: 20px;
