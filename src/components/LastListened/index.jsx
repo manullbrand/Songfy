@@ -47,6 +47,7 @@ const LastListenedList = styled.ul`
             box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
             display: block;
             cursor: pointer;
+           
           }
         }
       }

@@ -1,11 +1,31 @@
 import styled from "styled-components";
 import { Button, ButtonBack, ButtonForward } from "../Button";
+import { GoBell } from "react-icons/go";
+import { MdOutlineDownloading } from "react-icons/md";
+import { CSSVariables } from "../CSSVariables";
+import ButtonProfileDropdown from "../Button/ButtonProfileDropdown";
 
 const TopNavigationList = styled.ul`
   display: flex;
   justify-content: space-between;
   margin: 0;
   padding: 22px 0;
+
+  li {
+    align-items: center;
+    display: flex;
+
+    .button__install {
+      align-items: center;
+      color: ${CSSVariables.colors.activeText};
+      column-gap: 5px;
+      display: flex;
+    }
+  }
+
+  .list__profile-dropdown {
+    position: relative;
+  }
 `;
 
 const TopNavigationLinks = styled.div`
@@ -30,13 +50,18 @@ export default function TopNavegation() {
         </TopNavigationLinks>
         <TopNavigationLinks>
           <li>
-            <Button>Install App</Button>
+            <Button className="button__install">
+              <MdOutlineDownloading className="topnav__icons" />
+              Install App
+            </Button>
           </li>
           <li>
-            <Button>News</Button>
+            <Button>
+              <GoBell className="topnav__icons" />
+            </Button>
           </li>
-          <li>
-            <Button>Dropdown com interação do usuário</Button>
+          <li className="list__profile-dropdown">
+            <ButtonProfileDropdown></ButtonProfileDropdown>
           </li>
         </TopNavigationLinks>
       </TopNavigationList>

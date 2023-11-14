@@ -10,11 +10,13 @@ import NavigationContainer from "./components/NavigationContainer";
 
 const MainContainer = styled.div`
   background-color: ${CSSVariables.colors.background};
+  box-sizing: border-box;
   display: flex;
   gap: 6px;
   height: 100%;
   justify-content: center;
   margin: 0;
+  padding: 8px;
   width: 100%;
 `;
 

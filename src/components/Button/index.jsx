@@ -3,8 +3,10 @@ import { CSSVariables } from "../CSSVariables";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
 export const Button = styled.button`
+  align-items: center;
   background-color: ${CSSVariables.colors.background};
   border-radius: 50px;
+  display: flex;
 `;
 
 export const ButtonExplore = styled.button`

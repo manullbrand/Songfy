@@ -23,6 +23,9 @@ const FooterContainer = styled.footer`
   display: grid;
   grid-template-columns: 1fr 1.2fr 1fr;
   min-width: 1230px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 `;
 
 const PlayingNow = styled.div`

@@ -15,7 +15,7 @@ import { BsFillPinAngleFill } from "react-icons/bs";
 const AsideContainer = styled.aside`
   display: flex;
   flex-direction: column;
- row-gap: 10px;
+  row-gap: 10px;
 `;
 
 const AsideFirstNav = styled.nav`
@@ -26,14 +26,14 @@ const AsideFirstNav = styled.nav`
   span {
     align-items: center;
     display: flex;
-    height: 40px;
+      height: 40px;
     gap: 20px;
-    padding: 4px 12px;
+    padding: 0 20px;
 
     h2 {
       font-size: 1rem;
-     
     }
+    
     svg {
       font-size: 25px;
     }
@@ -87,9 +87,8 @@ const AsideList = styled.ul`
 const AsideSecondNav = styled.nav`
   background-color: ${CSSVariables.colors.primary};
   border-radius: 5px;
-  height: 100vh;
+  height: 100%;
   padding: 8px 12px;
-  overflow: auto;
 
   div {
     align-items: center;
