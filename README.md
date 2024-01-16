@@ -4,11 +4,11 @@
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/manullbrand/Songfy)
 ![GitHub](https://img.shields.io/github/license/manullbrand/Songfy)
 
-A Spotify-like web application's frontend developed using React and Styled-Components. This project is a part of my journey to enhance my React and front-end development skills.
+A Spotify-like web application's front-end developed using React and Styled-Components. This project is a part of my journey to enhance my React and front-end development skills.
 
 ![Demo Gif](demo.gif)
 
-## 🚀 Features
+## 🚀 Aimed Features
 
 - 🎧 Browse your favorite songs, albums, and artists.
 - 📂 Create and manage playlists.
